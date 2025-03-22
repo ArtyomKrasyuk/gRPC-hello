@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+option java_package = "com.example.service.grpc";
+
+message HelloRequest{
+    string name = 1;
+}
+
+message HelloResponse{
+    string greeting = 1;
+}
+
+service HelloService{
+    rpc SayHello(HelloRequest) returns (HelloResponse) {}
+}
